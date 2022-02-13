@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const theme = {};
 
@@ -32,3 +33,5 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 `;
+
+export const Button = styled.button``;
