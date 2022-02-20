@@ -1,3 +1,4 @@
+import { Button, Container } from "../global/GlobalStyle";
 import { NextHead } from "../global/NextHead";
 
 export default function Home() {
@@ -5,7 +6,10 @@ export default function Home() {
     <>
       <NextHead title="E-Commerce - Login" />
 
-      <div>home</div>
+      <Container>
+        home
+        <Button>Button</Button>
+      </Container>
     </>
   );
 }
