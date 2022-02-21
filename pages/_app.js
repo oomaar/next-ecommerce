@@ -1,5 +1,3 @@
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle, lightTheme, theme } from "../global/GlobalStyle";
 import { Layout } from "../global/Layout/Layout";
 import { SessionProvider } from "next-auth/react";
 
@@ -9,14 +7,9 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-      <ThemeProvider theme={theme}>
-        <ThemeProvider theme={lightTheme}>
-          <GlobalStyle />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
-      </ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </SessionProvider>
   );
 }
