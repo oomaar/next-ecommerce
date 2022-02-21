@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import { Navbar } from "../../components/Navbar/Navbar";
 import { GlobalStyle, lightTheme, theme } from "../GlobalStyle";
 
 export const Layout = ({ children }) => {
@@ -6,7 +7,7 @@ export const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
-        {/* Navbar */}
+        <Navbar />
         {/* Sidebar */}
         {children}
         {/* Footer */}
