@@ -11,7 +11,7 @@ import {
   ButtonsContainer,
 } from "./styledNavbar";
 
-export const Navbar = () => {
+export const Navbar = ({ toggleTheme, checkTheme }) => {
   const [showInput, setShowInput] = useState(false);
 
   return (
@@ -36,7 +36,13 @@ export const Navbar = () => {
       <ButtonsContainer>
         <Button>Log in</Button>
         <Button>Sign up</Button>
-        <Icon>dark_mode</Icon>
+        <div>
+          {toggleTheme === "light" ? (
+            <Icon onClick={checkTheme}>dark_mode</Icon>
+          ) : (
+            <Icon onClick={checkTheme}>light_mode</Icon>
+          )}
+        </div>
       </ButtonsContainer>
     </Nav>
   );
