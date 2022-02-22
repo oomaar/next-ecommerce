@@ -1,6 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
+// Global Transition
+export const transition = `all 0.35s ease-in-out`;
+
+// Box Shadow
+const shadowLight = `0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)`;
+const shadowDark = `0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.1)`;
+
 // View Ports
 export const lgScreen = `1024px`;
 export const mdScreen = `678px`;
@@ -45,7 +52,9 @@ export const lightTheme = {
     scrollBarColor: `hsl(${hueColor}, 12%, 90%)`,
     scrollThumbColor: `hsl(${hueColor}, 12%, 80%)`,
     hoverColor: `hsl(${hueColor}, 57%, 53%)`,
-    cardColor: `hsl(${hueColor},38%,97%)`,
+    cardColor: `hsl(${hueColor}, 38%, 77%)`,
+    navBorder: `hsl(${hueColor}, 0%, 94%)`,
+    shadowColor: `${shadowLight}`,
   },
 };
 
@@ -60,21 +69,22 @@ export const darkTheme = {
     scrollThumbColor: `hsl(${hueColor}, 12%, 36%)`,
     hoverColor: `hsl(${hueColor}, 57%, 53%)`,
     cardColor: `hsl(${hueColor}, 29%, 16%)`,
+    navBorder: `hsl(${hueColor}, 38%, 97%)`,
+    shadowColor: `${shadowDark}`,
   },
 };
 
 // Reusable Classes
-export const Button = styled.a`
+export const Button = styled.button`
   background: ${({ theme }) => theme.colors.firstColor};
   color: #fff;
   padding: 0.7rem 1rem;
   border-radius: 0.4rem;
+  transition: ${transition};
 
   :hover {
-    ${({ theme }) => theme.colors.hoverColor};
+    background: ${({ theme }) => theme.colors.hoverColor};
   }
-
-  margin-left: 5rem;
 `;
 
 export const Container = styled.div`

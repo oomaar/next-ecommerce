@@ -1,0 +1,56 @@
+{
+  "links": [
+    {
+      "id": 1,
+      "title": "Today's Deals"
+    },
+    {
+      "id": 2,
+      "title": "Sell"
+    },
+    {
+      "id": 3,
+      "title": "Help"
+    },
+    {
+      "id": 4,
+      "title": "Fashion"
+    },
+    {
+      "id": 5,
+      "title": "Grocery"
+    },
+    {
+      "id": 6,
+      "title": "Perfumes"
+    },
+    {
+      "id": 7,
+      "title": "Mobile Phones"
+    },
+    {
+      "id": 8,
+      "title": "Electronics"
+    },
+    {
+      "id": 9,
+      "title": "Appliances"
+    },
+    {
+      "id": 10,
+      "title": "Home"
+    },
+    {
+      "id": 11,
+      "title": "Coupons"
+    },
+    {
+      "id": 12,
+      "title": "Video Games"
+    },
+    {
+      "id": 13,
+      "title": "Toys & Games"
+    }
+  ]
+}
