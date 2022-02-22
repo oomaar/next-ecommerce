@@ -6,11 +6,11 @@ export const transition = `all 0.35s ease-in-out`;
 
 // Box Shadow
 const shadowLight = `0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)`;
-const shadowDark = `0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.1)`;
+const shadowDark = `0 10px 15px -3px rgb(255 255 255 / 0.1), 0 4px 6px -4px rgb(255 255 255 / 0.1)`;
 
 // View Ports
 export const lgScreen = `1024px`;
-export const mdScreen = `678px`;
+export const mdScreen = `768px`;
 export const smScreen = `425px`;
 export const xsScreen = `320px`;
 
@@ -64,7 +64,7 @@ export const darkTheme = {
     titleColor: `hsl(${hueColor}, 8%, 95%)`,
     textColor: `hsl(${hueColor}, 8%, 75%)`,
     textColorLight: `hsl(${hueColor}, 8%, 65%)`,
-    bodyColor: `hsl(${hueColor}, 28%, 13%)`,
+    bodyColor: `hsl(${hueColor}, 18%, 13%)`,
     scrollBarColor: `hsl(${hueColor}, 12%, 48%)`,
     scrollThumbColor: `hsl(${hueColor}, 12%, 36%)`,
     hoverColor: `hsl(${hueColor}, 57%, 53%)`,
@@ -111,6 +111,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: ${({ theme }) => theme.colors.bodyColor};
     font-family: 'Lato', sans-serif;
+    transition: ${transition};
   }
 
   ul {

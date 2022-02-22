@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { css } from "styled-components";
 import { keyframes } from "styled-components";
-import { transition } from "../../global/GlobalStyle";
+import {
+  lgScreen,
+  mdScreen,
+  smScreen,
+  transition,
+} from "../../global/GlobalStyle";
 
 const Bounce = keyframes`
   0% {
@@ -17,11 +22,6 @@ const Bounce = keyframes`
   }
 `;
 
-const animation = (props) =>
-  css`
-    animation: ${Bounce} ${props.showInput} 4s infinite alternate;
-  `;
-
 export const Nav = styled.nav`
   border-bottom: 1px solid ${({ theme }) => theme.colors.navBorder};
   display: flex;
@@ -31,11 +31,25 @@ export const Nav = styled.nav`
 
   span {
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.titleColor};
+  }
+
+  @media screen and (max-width: ${smScreen}) {
+    display: grid;
+    gap: 2rem;
   }
 `;
 
-export const LogoContainer = styled.div``;
+export const LogoContainer = styled.div`
+  @media screen and (max-width: ${mdScreen}) {
+    width: 70px;
+  }
+
+  @media screen and (max-width: ${smScreen}) {
+    grid-row: 1 / 2;
+    width: 60px;
+  }
+`;
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -48,6 +62,22 @@ export const SearchContainer = styled.div`
   width: ${({ showInput }) => (showInput ? "800px" : "0")};
   box-shadow: ${({ theme, showInput }) =>
     showInput && theme.colors.shadowColor};
+
+  @media screen and (max-width: ${lgScreen}) {
+    width: ${({ showInput }) => (showInput ? "600px" : "0")};
+  }
+
+  @media screen and (max-width: ${mdScreen}) {
+    width: ${({ showInput }) => (showInput ? "450px" : "0")};
+    margin: 0 0.5rem;
+  }
+
+  @media screen and (max-width: ${smScreen}) {
+    width: ${({ showInput }) => (showInput ? "100%" : "0")};
+    grid-area: "search";
+    grid-column: span 2;
+    margin: 0 0 1.5rem;
+  }
 `;
 
 export const SearchIcon = styled.div`
@@ -55,6 +85,7 @@ export const SearchIcon = styled.div`
   padding: 0.3rem;
   border-radius: 50%;
   cursor: pointer;
+  transition: ${transition};
   animation: ${({ showInput }) =>
     !showInput &&
     css`
@@ -63,6 +94,11 @@ export const SearchIcon = styled.div`
 
   span {
     color: #fff;
+  }
+
+  @media screen and (max-width: ${smScreen}) {
+    position: ${({ showInput }) => (!showInput ? "absolute" : "static")};
+    left: 45%;
   }
 `;
 
@@ -78,4 +114,13 @@ export const SearchInput = styled.input`
   width: ${({ showInput }) => (showInput ? "100%" : "0")};
 `;
 
-export const ButtonsContainer = styled.div``;
+export const ButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+
+  @media screen and (max-width: ${smScreen}) {
+    grid-area: "logo";
+    grid-row: 1 / 2;
+  }
+`;
