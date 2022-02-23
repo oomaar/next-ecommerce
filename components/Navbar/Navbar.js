@@ -11,7 +11,7 @@ import {
   ButtonsContainer,
 } from "./styledNavbar";
 
-export const Navbar = ({ toggleTheme, checkTheme }) => {
+export const Navbar = ({ toggleTheme, checkTheme, setShowSidebar }) => {
   const [showInput, setShowInput] = useState(false);
 
   return (
@@ -23,6 +23,7 @@ export const Navbar = ({ toggleTheme, checkTheme }) => {
           height={100}
           objectFit="contain"
         />
+        <Icon onClick={() => setShowSidebar(true)}>menu</Icon>
       </LogoContainer>
       <SearchContainer showInput={showInput}>
         <SearchIcon

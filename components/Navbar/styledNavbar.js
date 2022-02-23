@@ -41,8 +41,13 @@ export const Nav = styled.nav`
 `;
 
 export const LogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media screen and (max-width: ${mdScreen}) {
     width: 70px;
+    /* flex-direction: row; */
   }
 
   @media screen and (max-width: ${smScreen}) {

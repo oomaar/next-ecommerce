@@ -4,6 +4,9 @@ import styled from "styled-components";
 // Global Transition
 export const transition = `all 0.35s ease-in-out`;
 
+// Sidebar Width
+export const SidebarWidth = `500px`
+
 // Box Shadow
 const shadowLight = `0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)`;
 const shadowDark = `0 10px 15px -3px rgb(255 255 255 / 0.1), 0 4px 6px -4px rgb(255 255 255 / 0.1)`;
@@ -16,7 +19,6 @@ export const xsScreen = `320px`;
 
 // Themes
 export const theme = {
-  HeaderHeight: "3rem",
   typography: {
     bodyFont: `'Poppins', sans-serif`,
     bigFontSize: "2rem",
@@ -35,6 +37,7 @@ export const theme = {
     zToolTip: "10",
     zFixed: "100",
     zHeader: "200",
+    zSidebar: "300",
     zModel: "1000",
   },
 };
@@ -76,14 +79,17 @@ export const darkTheme = {
 
 // Reusable Classes
 export const Button = styled.button`
-  background: ${({ theme }) => theme.colors.firstColor};
-  color: #fff;
-  padding: 0.7rem 1rem;
   border-radius: 0.4rem;
+  font-size: ${({ link }) => link && "1.1rem"};
+  color: ${({ link }) => link ? "#000" : "#fff"};
+  padding: ${({ link }) => link ? "0" : "0.7rem 1rem"};
+  margin: ${({ sidebarLink }) => sidebarLink && "0 0.5rem"};
+  background: ${({ theme, link }) => link ? "transparent" : theme.colors.firstColor};
   transition: ${transition};
 
   :hover {
-    background: ${({ theme }) => theme.colors.hoverColor};
+    background: ${({ theme, link }) => link ? "transparent" : theme.colors.hoverColor};
+    text-decoration: ${({ link }) => link && "underline"};
   }
 `;
 
