@@ -18,7 +18,7 @@ export const Layout = ({ children }) => {
 
   useEffect(() => {
     const themeValue = localStorage.getItem("next-commerce-dark-value");
-    setToggleTheme(themeValue);
+    themeValue ? setToggleTheme(themeValue) : setToggleTheme("light");
   }, []);
 
   return (
