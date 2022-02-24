@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 // Global Transition
-export const transition = `all 0.35s ease-in-out`;
+export const transition = `all 0.5s ease-in-out`;
 
 // Sidebar Width
 export const SidebarWidth = `500px`;
