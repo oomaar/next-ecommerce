@@ -1,0 +1,190 @@
+[
+  {
+    "id": 1,
+    "title": "Trending",
+    "links": [
+      {
+        "id": 1.1,
+        "title": "Best Sellers",
+        "href": "#",
+        "icon": false
+      },
+      {
+        "id": 1.2,
+        "title": "New Releases",
+        "href": "#",
+        "icon": false
+      },
+      {
+        "id": 1.3,
+        "title": "Movers & Shakers",
+        "href": "#",
+        "icon": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Digital Content And Devices",
+    "links": [
+      {
+        "id": 2.1,
+        "title": "Amazon Kindle E-readers",
+        "href": "#",
+        "icon": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Shop by Category",
+    "links": [
+      {
+        "id": 3.1,
+        "title": "Mobiles, Tablets & Accessories",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": 3.2,
+        "title": "Computers & Office Supplies",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": 3.3,
+        "title": "TVs & Electronics",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": 3.4,
+        "title": "Women's Fashion",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": 3.5,
+        "title": "See More || Less",
+        "href": "",
+        "icon": true
+      }
+    ],
+    "seeMore": [
+      {
+        "id": "more-1",
+        "title": "Men's Fashion",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-2",
+        "title": "Kids Fashion",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-3",
+        "title": "Health, Beauty & Perfumes",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-4",
+        "title": "Supermarket",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-5",
+        "title": "Home, Furniture & Tools",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-6",
+        "title": "Kitchen & Appliances",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-7",
+        "title": "Toys, Games & Baby",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-8",
+        "title": "Sports, Fitness & Outdoors",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-9",
+        "title": "Books",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-10",
+        "title": "Video Games",
+        "href": "#",
+        "icon": true
+      },
+      {
+        "id": "more-11",
+        "title": "Automotive",
+        "href": "#",
+        "icon": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Programs & Features",
+    "links": [
+      {
+        "id": 4.1,
+        "title": "Today's Deals",
+        "href": "#",
+        "icon": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Help & Settings",
+    "links": [
+      {
+        "id": 4.1,
+        "title": "Your Account",
+        "href": "#",
+        "icon": false
+      },
+      {
+        "id": 4.2,
+        "title": "English",
+        "href": "#",
+        "icon": false
+      },
+      {
+        "id": 4.3,
+        "title": "Egypt",
+        "href": "#",
+        "icon": false
+      },
+      {
+        "id": 4.4,
+        "title": "Help",
+        "href": "#",
+        "icon": false
+      },
+      {
+        "id": 4.5,
+        "title": "Sign In",
+        "href": "#",
+        "icon": false
+      }
+    ]
+  }
+]
