@@ -7,6 +7,7 @@ export const SidebarContainer = styled.aside`
   left: 0;
   bottom: 0;
   height: 100vh;
+  overflow-y: scroll;
   width: ${SidebarWidth};
   background-color: ${({ theme }) => theme.colors.bodyColor};
   transition: ${transition};
@@ -35,8 +36,8 @@ export const SidebarHeader = styled.header`
   align-items: center;
   width: 100%;
   padding: 1rem 0.5rem;
-  background: ${({ theme }) => theme.colors.scrollThumbColor};
-  color: ${({ theme }) => theme.colors.titleColor};
+  background: ${({ theme }) => theme.colors.cardColor};
+  color: #fff;
 
   p {
     font-size: 1.1rem;
@@ -50,12 +51,16 @@ export const SidebarHeader = styled.header`
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
-    color: ${({ theme }) => theme.colors.titleColor};
+    color: #fff;
+  }
+
+  .white {
+    color: #fff;
   }
 `;
 
 export const SidebarHeaderUser = styled.div`
-  color: ${({ theme }) => theme.colors.titleColor};
+  color: #fff;
 
   span {
     font-size: 2rem;
@@ -63,14 +68,19 @@ export const SidebarHeaderUser = styled.div`
   }
 `;
 
-export const SidebarLinkContainer = styled.div``;
+export const SidebarLinkContainer = styled.div`
+  padding: 1rem 0 0 0.5rem;
+`;
 
 export const SidebarTitle = styled.p`
   color: ${({ theme }) => theme.colors.titleColor};
+  font-size: ${({ theme }) => theme.typography.h2FontSize};
 `;
 
 export const SidebarList = styled.ul`
   color: ${({ theme }) => theme.colors.textColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.navBorder};
+  padding-bottom: 1rem;
 `;
 
 export const SidebarListItem = styled.li``;
@@ -80,21 +90,30 @@ export const SeeMoreList = styled.ul`
   opacity: ${({ moreLinks }) => (moreLinks ? "1" : "0")};
   overflow: hidden;
   transition: ${transition};
-  /* moreLinks && */
 `;
 
 export const SeeMoreListItem = styled.li``;
 
 export const SidebarLink = styled.a`
   color: ${({ theme }) => theme.colors.textColor};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  font-size: ${({ theme }) => theme.typography.normalFontSize};
+  margin: 1rem 0;
 `;
 
 export const SeeMoreLink = styled.p`
   cursor: pointer;
   display: flex;
   align-items: center;
+  position: relative;
+  font-size: ${({ theme }) => theme.typography.normalFontSize};
 
   span {
+    position: absolute;
+    left: 15%;
     transition: ${transition};
     transform: ${({ moreLinks }) =>
       moreLinks ? "rotate(90deg)" : "rotate(0)"};

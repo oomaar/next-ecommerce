@@ -73,7 +73,7 @@ export const Sidebar = ({ showSidebar, setShowSidebar }) => {
           </SidebarHeaderUser>
           <p>
             Hello,{" "}
-            <Button link sidebarLink>
+            <Button className="white" link sidebarLink>
               Sign in
             </Button>
           </p>
