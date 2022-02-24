@@ -27,8 +27,17 @@ export const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <ThemeProvider theme={toggleTheme === "light" ? lightTheme : darkTheme}>
         <GlobalStyle />
-        <Navbar toggleTheme={toggleTheme} checkTheme={checkTheme} setShowSidebar={setShowSidebar} />
-        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        <Navbar
+          toggleTheme={toggleTheme}
+          checkTheme={checkTheme}
+          setShowSidebar={setShowSidebar}
+        />
+        <Sidebar
+          toggleTheme={toggleTheme}
+          checkTheme={checkTheme}
+          showSidebar={showSidebar}
+          setShowSidebar={setShowSidebar}
+        />
         {children}
         {/* Footer */}
       </ThemeProvider>

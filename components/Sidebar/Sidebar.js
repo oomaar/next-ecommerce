@@ -17,7 +17,12 @@ import {
 } from "./styledSidebar";
 import { useState } from "react";
 
-export const Sidebar = ({ showSidebar, setShowSidebar }) => {
+export const Sidebar = ({
+  showSidebar,
+  setShowSidebar,
+  checkTheme,
+  toggleTheme,
+}) => {
   const [moreLinks, setMoreLinks] = useState(false);
 
   const sidebarLinks = sidebarData.map((link) => (
@@ -77,6 +82,13 @@ export const Sidebar = ({ showSidebar, setShowSidebar }) => {
               Sign in
             </Button>
           </p>
+          <div className="dark-icon">
+            {toggleTheme === "light" ? (
+              <Icon onClick={checkTheme}>dark_mode</Icon>
+            ) : (
+              <Icon onClick={checkTheme}>light_mode</Icon>
+            )}
+          </div>
           <Icon className="close-icon" onClick={() => setShowSidebar(false)}>
             close
           </Icon>

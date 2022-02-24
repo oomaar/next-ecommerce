@@ -54,6 +54,16 @@ export const SidebarHeader = styled.header`
     color: #fff;
   }
 
+  .dark-icon {
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
+    color: #fff;
+  }
+
   .white {
     color: #fff;
   }
