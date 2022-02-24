@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { SidebarWidth, transition } from '../../global/GlobalStyle';
+import styled from "styled-components";
+import { SidebarWidth, transition } from "../../global/GlobalStyle";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -10,12 +10,13 @@ export const SidebarContainer = styled.aside`
   width: ${SidebarWidth};
   background-color: ${({ theme }) => theme.colors.bodyColor};
   transition: ${transition};
-  transform: ${({ showSidebar }) => showSidebar ? "translateX(0)" : "translateX(-1000vw)"};
+  transform: ${({ showSidebar }) =>
+    showSidebar ? "translateX(0)" : "translateX(-1000vw)"};
   z-index: ${({ theme }) => theme.zIndex.zSidebar};
 `;
 
 export const OverLay = styled.div`
-  background: rgba(0, 0, 0 , 0.7);
+  background: rgba(47, 47, 47, 0.5);
   position: fixed;
   right: 0;
   top: 0;
@@ -23,7 +24,8 @@ export const OverLay = styled.div`
   bottom: 0;
   height: 100vh;
   transition: ${transition};
-  transform: ${({ showSidebar }) => showSidebar ? "translateX(0)" : "translateX(1000vw)"};
+  transform: ${({ showSidebar }) =>
+    showSidebar ? "translateX(0)" : "translateX(1000vw)"};
 `;
 
 export const SidebarHeader = styled.header`
@@ -52,7 +54,7 @@ export const SidebarHeader = styled.header`
 `;
 
 export const SidebarHeaderUser = styled.div`
-    color: ${({ theme }) => theme.colors.titleColor};
+  color: ${({ theme }) => theme.colors.titleColor};
 `;
 
 export const SidebarList = styled.ul``;

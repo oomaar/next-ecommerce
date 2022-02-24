@@ -23,7 +23,6 @@ export const Navbar = ({ toggleTheme, checkTheme, setShowSidebar }) => {
           height={100}
           objectFit="contain"
         />
-        <Icon onClick={() => setShowSidebar(true)}>menu</Icon>
       </LogoContainer>
       <SearchContainer showInput={showInput}>
         <SearchIcon
@@ -37,6 +36,9 @@ export const Navbar = ({ toggleTheme, checkTheme, setShowSidebar }) => {
       <ButtonsContainer>
         <Button>Log in</Button>
         <Button>Sign up</Button>
+        <div>
+          <Icon onClick={() => setShowSidebar(true)}>menu</Icon>
+        </div>
         <div>
           {toggleTheme === "light" ? (
             <Icon onClick={checkTheme}>dark_mode</Icon>
