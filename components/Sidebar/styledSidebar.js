@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { SidebarWidth, transition } from "../../global/GlobalStyle";
+import {
+  mdScreen,
+  SidebarWidth,
+  smScreen,
+  transition,
+} from "../../global/GlobalStyle";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -14,6 +19,10 @@ export const SidebarContainer = styled.aside`
   transform: ${({ showSidebar }) =>
     showSidebar ? "translateX(0)" : "translateX(-1000vw)"};
   z-index: ${({ theme }) => theme.zIndex.zSidebar};
+
+  @media screen and (max-width: ${mdScreen}) {
+    width: 100%;
+  }
 `;
 
 export const OverLay = styled.div`
@@ -27,6 +36,10 @@ export const OverLay = styled.div`
   transition: ${transition};
   transform: ${({ showSidebar }) =>
     showSidebar ? "translateX(0)" : "translateX(1000vw)"};
+
+  @media screen and (max-width: ${mdScreen}) {
+    display: none;
+  }
 `;
 
 export const SidebarHeader = styled.header`
@@ -79,7 +92,7 @@ export const SidebarHeaderUser = styled.div`
 `;
 
 export const SidebarLinkContainer = styled.div`
-  padding: 1rem 0 0 0.5rem;
+  padding-left: 1rem;
 `;
 
 export const SidebarTitle = styled.p`
@@ -90,7 +103,6 @@ export const SidebarTitle = styled.p`
 export const SidebarList = styled.ul`
   color: ${({ theme }) => theme.colors.textColor};
   border-bottom: 1px solid ${({ theme }) => theme.colors.navBorder};
-  padding-bottom: 1rem;
 `;
 
 export const SidebarListItem = styled.li``;
@@ -112,6 +124,11 @@ export const SidebarLink = styled.a`
   width: 80%;
   font-size: ${({ theme }) => theme.typography.normalFontSize};
   margin: 1rem 0;
+  transition: ${transition};
+
+  @media screen and (max-width: ${smScreen}) {
+    width: 100%;
+  }
 `;
 
 export const SeeMoreLink = styled.p`
@@ -127,5 +144,9 @@ export const SeeMoreLink = styled.p`
     transition: ${transition};
     transform: ${({ moreLinks }) =>
       moreLinks ? "rotate(90deg)" : "rotate(0)"};
+
+    @media screen and (max-width: ${smScreen}) {
+      left: 25%;
+    }
   }
 `;
