@@ -1,9 +1,11 @@
+import { useState } from "react";
 import sidebarData from "../../data/sidebarData.json";
 import { Icon } from "@material-ui/core";
 import { Button } from "../../global/GlobalStyle";
 import {
   OverLay,
   SidebarContainer,
+  SidebarPageContainer,
   SidebarHeader,
   SidebarHeaderUser,
   SidebarLinkContainer,
@@ -13,9 +15,9 @@ import {
   SidebarLink,
   SeeMoreLink,
   SeeMoreList,
-  SeeMoreListItem,
+  PageBackButton,
+  SidebarPageTwoContainer,
 } from "./styledSidebar";
-import { useState } from "react";
 
 export const Sidebar = ({
   showSidebar,
@@ -24,44 +26,78 @@ export const Sidebar = ({
   toggleTheme,
 }) => {
   const [moreLinks, setMoreLinks] = useState(false);
+  const [sidebarPage, setSidebarPage] = useState("");
+  const [sidebarPageNumber, setSidebarPageNumber] = useState(1);
+  console.log("🚀 ~ file: Sidebar.js ~ line 30 ~ sidebarPage", sidebarPage);
 
-  const sidebarLinks = sidebarData.map((link) => (
+  const handleSetPage = (pageName, pageNumber) => {
+    setSidebarPage(pageName);
+    setSidebarPageNumber(pageNumber);
+  };
+
+  const sidebarLinks = sidebarData.pageOne.map((link) => (
     <SidebarLinkContainer key={link.id}>
       <SidebarTitle>{link.title}</SidebarTitle>
       <SidebarList>
         {link.links.map((subLink) => (
-          <SidebarListItem key={subLink.id}>
-            <div>
-              {subLink.title === "See" ? (
-                <>
-                  <SeeMoreLink
-                    moreLinks={moreLinks}
-                    onClick={() => setMoreLinks((state) => !state)}
-                  >
-                    {subLink.title} {moreLinks ? "Less" : "All"}
-                    {subLink.icon && <Icon>chevron_right</Icon>}
-                  </SeeMoreLink>
-                  <SeeMoreList moreLinks={moreLinks}>
-                    {link.seeMore.map((more) => (
-                      <SeeMoreListItem moreLinks={moreLinks} key={more.id}>
-                        <SidebarLink href={more.href}>
-                          {more.title}
-                          {more.icon && <Icon>chevron_right</Icon>}
-                        </SidebarLink>
-                      </SeeMoreListItem>
-                    ))}
-                  </SeeMoreList>
-                </>
-              ) : (
-                <SidebarLink href={subLink.href}>
-                  {subLink.title}
+          <div key={subLink.id}>
+            {subLink.title === "See" ? (
+              <>
+                <SeeMoreLink
+                  moreLinks={moreLinks}
+                  onClick={() => setMoreLinks((state) => !state)}
+                >
+                  {subLink.title} {moreLinks ? "Less" : "All"}
                   {subLink.icon && <Icon>chevron_right</Icon>}
-                </SidebarLink>
-              )}
-            </div>
-          </SidebarListItem>
+                </SeeMoreLink>
+                <SeeMoreList moreLinks={moreLinks}>
+                  {link.seeMore.map((more) => (
+                    <SidebarListItem
+                      onClick={() => handleSetPage(more.page, 2)}
+                      moreLinks={moreLinks}
+                      key={more.id}
+                    >
+                      {more.title}
+                      {more.icon && <Icon>chevron_right</Icon>}
+                    </SidebarListItem>
+                  ))}
+                </SeeMoreList>
+              </>
+            ) : !subLink.icon ? (
+              <SidebarLink>
+                {subLink.title}
+                {subLink.icon && <Icon>chevron_right</Icon>}
+              </SidebarLink>
+            ) : (
+              <SidebarListItem onClick={() => handleSetPage(subLink.page, 2)}>
+                {subLink.title}
+                {subLink.icon && <Icon>chevron_right</Icon>}
+              </SidebarListItem>
+            )}
+          </div>
         ))}
       </SidebarList>
+    </SidebarLinkContainer>
+  ));
+
+  const pageTwoData = sidebarData.pageTwo.map((link) => (
+    <SidebarLinkContainer key={link.id}>
+      {link.title === sidebarPage && (
+        <>
+          {link.links.map((subPageLink) => (
+            <div key={link.id}>
+              <SidebarTitle>{subPageLink.listTitle}</SidebarTitle>
+              <SidebarList>
+                {subPageLink.listLinks.map((listLink) => (
+                  <SidebarLink key={listLink.id} href={listLink.href}>
+                    {listLink.title}
+                  </SidebarLink>
+                ))}
+              </SidebarList>
+            </div>
+          ))}
+        </>
+      )}
     </SidebarLinkContainer>
   ));
 
@@ -72,28 +108,36 @@ export const Sidebar = ({
         onClick={() => setShowSidebar(false)}
       />
       <SidebarContainer showSidebar={showSidebar}>
-        <SidebarHeader>
-          <SidebarHeaderUser>
-            <Icon>account_circle</Icon>
-          </SidebarHeaderUser>
-          <p>
-            Hello,{" "}
-            <Button className="white" link sidebarLink>
-              Sign in
-            </Button>
-          </p>
-          <div className="dark-icon">
-            {toggleTheme === "light" ? (
-              <Icon onClick={checkTheme}>dark_mode</Icon>
-            ) : (
-              <Icon onClick={checkTheme}>light_mode</Icon>
-            )}
-          </div>
-          <Icon className="close-icon" onClick={() => setShowSidebar(false)}>
-            close
-          </Icon>
-        </SidebarHeader>
-        {sidebarLinks}
+        <SidebarPageContainer sidebarPageNumber={sidebarPageNumber}>
+          <SidebarHeader>
+            <SidebarHeaderUser>
+              <Icon>account_circle</Icon>
+            </SidebarHeaderUser>
+            <p>
+              Hello,{" "}
+              <Button className="white" link sidebarLink>
+                Sign in
+              </Button>
+            </p>
+            <div className="dark-icon">
+              {toggleTheme === "light" ? (
+                <Icon onClick={checkTheme}>dark_mode</Icon>
+              ) : (
+                <Icon onClick={checkTheme}>light_mode</Icon>
+              )}
+            </div>
+            <Icon className="close-icon" onClick={() => setShowSidebar(false)}>
+              close
+            </Icon>
+          </SidebarHeader>
+          {sidebarLinks}
+        </SidebarPageContainer>
+        <SidebarPageTwoContainer sidebarPageNumber={sidebarPageNumber}>
+          <PageBackButton onClick={() => handleSetPage("", 1)}>
+            <Icon>west</Icon> Main Menu
+          </PageBackButton>
+          {pageTwoData}
+        </SidebarPageTwoContainer>
       </SidebarContainer>
     </>
   );
