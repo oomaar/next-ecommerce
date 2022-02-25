@@ -1,190 +1,619 @@
-[
-  {
-    "id": 1,
-    "title": "Trending",
-    "links": [
-      {
-        "id": 1.1,
-        "title": "Best Sellers",
-        "href": "#",
-        "icon": false
-      },
-      {
-        "id": 1.2,
-        "title": "New Releases",
-        "href": "#",
-        "icon": false
-      },
-      {
-        "id": 1.3,
-        "title": "Movers & Shakers",
-        "href": "#",
-        "icon": false
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Digital Content And Devices",
-    "links": [
-      {
-        "id": 2.1,
-        "title": "Amazon Kindle E-readers",
-        "href": "#",
-        "icon": true
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Shop by Category",
-    "links": [
-      {
-        "id": 3.1,
-        "title": "Mobiles, Tablets & Accessories",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": 3.2,
-        "title": "Computers & Office Supplies",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": 3.3,
-        "title": "TVs & Electronics",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": 3.4,
-        "title": "Women's Fashion",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": 3.5,
-        "title": "See",
-        "href": "",
-        "icon": true
-      }
-    ],
-    "seeMore": [
-      {
-        "id": "more-1",
-        "title": "Men's Fashion",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-2",
-        "title": "Kids Fashion",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-3",
-        "title": "Health, Beauty & Perfumes",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-4",
-        "title": "Supermarket",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-5",
-        "title": "Home, Furniture & Tools",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-6",
-        "title": "Kitchen & Appliances",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-7",
-        "title": "Toys, Games & Baby",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-8",
-        "title": "Sports, Fitness & Outdoors",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-9",
-        "title": "Books",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-10",
-        "title": "Video Games",
-        "href": "#",
-        "icon": true
-      },
-      {
-        "id": "more-11",
-        "title": "Automotive",
-        "href": "#",
-        "icon": true
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Programs & Features",
-    "links": [
-      {
-        "id": 4.1,
-        "title": "Today's Deals",
-        "href": "#",
-        "icon": false
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Help & Settings",
-    "links": [
-      {
-        "id": 4.1,
-        "title": "Your Account",
-        "href": "#",
-        "icon": false
-      },
-      {
-        "id": 4.2,
-        "title": "English",
-        "href": "#",
-        "icon": false
-      },
-      {
-        "id": 4.3,
-        "title": "Egypt",
-        "href": "#",
-        "icon": false
-      },
-      {
-        "id": 4.4,
-        "title": "Help",
-        "href": "#",
-        "icon": false
-      },
-      {
-        "id": 4.5,
-        "title": "Sign In",
-        "href": "#",
-        "icon": false
-      }
-    ]
-  }
-]
+{
+  "pageOne": [
+    {
+      "id": 1,
+      "title": "Trending",
+      "links": [
+        {
+          "id": 1.1,
+          "title": "Best Sellers",
+          "icon": false,
+          "href": ""
+        },
+        {
+          "id": 1.2,
+          "title": "New Releases",
+          "icon": false,
+          "href": ""
+        },
+        {
+          "id": 1.3,
+          "title": "Movers & Shakers",
+          "icon": false,
+          "href": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Digital Content And Devices",
+      "links": [
+        {
+          "id": 2.1,
+          "title": "Amazon Kindle E-readers",
+          "page": "Amazon Kindle E-readers",
+          "icon": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Shop by Category",
+      "links": [
+        {
+          "id": 3.1,
+          "title": "Mobiles, Tablets & Accessories",
+          "page": "Mobiles, Tablets & Accessories",
+          "icon": true
+        },
+        {
+          "id": 3.2,
+          "title": "Computers & Office Supplies",
+          "page": "Computers & Office Supplies",
+          "icon": true
+        },
+        {
+          "id": 3.3,
+          "title": "TVs & Electronics",
+          "page": "TVs & Electronics",
+          "icon": true
+        },
+        {
+          "id": 3.4,
+          "title": "Women's Fashion",
+          "page": "Women's Fashion",
+          "icon": true
+        },
+        {
+          "id": 3.5,
+          "title": "See",
+          "icon": true
+        }
+      ],
+      "seeMore": [
+        {
+          "id": "more-1",
+          "title": "Men's Fashion",
+          "page": "Men's Fashion",
+          "icon": true
+        },
+        {
+          "id": "more-2",
+          "title": "Kids Fashion",
+          "page": "Kids Fashion",
+          "icon": true
+        },
+        {
+          "id": "more-3",
+          "title": "Health, Beauty & Perfumes",
+          "page": "Health, Beauty & Perfumes",
+          "icon": true
+        },
+        {
+          "id": "more-4",
+          "title": "Supermarket",
+          "page": "Supermarket",
+          "icon": true
+        },
+        {
+          "id": "more-5",
+          "title": "Home, Furniture & Tools",
+          "page": "Home, Furniture & Tools",
+          "icon": true
+        },
+        {
+          "id": "more-6",
+          "title": "Kitchen & Appliances",
+          "page": "Kitchen & Appliances",
+          "icon": true
+        },
+        {
+          "id": "more-7",
+          "title": "Toys, Games & Baby",
+          "page": "Toys, Games & Baby",
+          "icon": true
+        },
+        {
+          "id": "more-8",
+          "title": "Sports, Fitness & Outdoors",
+          "page": "Sports, Fitness & Outdoors",
+          "icon": true
+        },
+        {
+          "id": "more-9",
+          "title": "Books",
+          "page": "Books",
+          "icon": true
+        },
+        {
+          "id": "more-10",
+          "title": "Video Games",
+          "page": "Video Games",
+          "icon": true
+        },
+        {
+          "id": "more-11",
+          "title": "Automotive",
+          "page": "Automotive",
+          "icon": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Programs & Features",
+      "links": [
+        {
+          "id": 4.1,
+          "title": "Today's Deals",
+          "icon": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Help & Settings",
+      "links": [
+        {
+          "id": 5.1,
+          "title": "Your Account",
+          "icon": false
+        },
+        {
+          "id": 5.2,
+          "title": "English",
+          "icon": false
+        },
+        {
+          "id": 5.3,
+          "title": "Egypt",
+          "icon": false
+        },
+        {
+          "id": 5.4,
+          "title": "Help",
+          "icon": false
+        },
+        {
+          "id": 5.5,
+          "title": "Sign In",
+          "icon": false
+        }
+      ]
+    }
+  ],
+  "pageTwo": [
+    {
+      "id": "page-2a",
+      "title": "Amazon Kindle E-readers",
+      "links": [
+        {
+          "id": "page-2a.1",
+          "listTitle": "Kindle E-Readers",
+          "listLinks": [
+            {
+              "id": "page-2a.1.1",
+              "title": "Kindle",
+              "href": ""
+            },
+            {
+              "id": "page-2a.1.2",
+              "title": "All-new Kindle Paperwhite",
+              "href": ""
+            },
+            {
+              "id": "page-2a.1.3",
+              "title": "Kindle Oasis",
+              "href": ""
+            },
+            {
+              "id": "page-2a.1.4",
+              "title": "All Kindle E-readers",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2a.2",
+          "listTitle": "Kindle Content",
+          "listLinks": [
+            {
+              "id": "page-2a.2.1",
+              "title": "How to buy eBooks",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-2b",
+      "title": "Mobiles, Tablets & Accessories",
+      "links": [
+        {
+          "id": "page-2b.1",
+          "listTitle": "Mobiles, Tablets & More",
+          "listLinks": [
+            {
+              "id": "page-2b.1.1",
+              "title": "All Mobile Phones",
+              "href": ""
+            },
+            {
+              "id": "page-2b.1.2",
+              "title": "Tablets",
+              "href": ""
+            },
+            {
+              "id": "page-2b.1.3",
+              "title": "Wearable Technology",
+              "href": ""
+            },
+            {
+              "id": "page-2b.1.4",
+              "title": "Cases & Covers",
+              "href": ""
+            },
+            {
+              "id": "page-2b.1.5",
+              "title": "Power Banks & Chargers",
+              "href": ""
+            },
+            {
+              "id": "page-2b.1.6",
+              "title": "All Mobile Accessories",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-2c",
+      "title": "Computers & Office Supplies",
+      "links": [
+        {
+          "id": "page-2c.1",
+          "listTitle": "Computers",
+          "listLinks": [
+            {
+              "id": "page-2c.1.1",
+              "title": "All Computers",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.2",
+              "title": "Laptops",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.3",
+              "title": "Desktop & Monitors",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.4",
+              "title": "Drives & Storage",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.5",
+              "title": "Networking Devices",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.6",
+              "title": "Keyboards & Mice",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.7",
+              "title": "PC Gaming",
+              "href": ""
+            },
+            {
+              "id": "page-2c.1.8",
+              "title": "All Computer Accessories",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2c.2",
+          "listTitle": "Office & Stationery",
+          "listLinks": [
+            {
+              "id": "page-2c.2.1",
+              "title": "printers & Accessories",
+              "href": ""
+            },
+            {
+              "id": "page-2c.2.2",
+              "title": "Office & School Supplies",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-2d",
+      "title": "TVs & Electronics",
+      "links": [
+        {
+          "id": "page-2d.1",
+          "listTitle": "Electronics",
+          "listLinks": [
+            {
+              "id": "page-2d.1.1",
+              "title": "All Electronics",
+              "href": ""
+            },
+            {
+              "id": "page-2d.1.2",
+              "title": "Televisions",
+              "href": ""
+            },
+            {
+              "id": "page-2d.1.3",
+              "title": "Cameras",
+              "href": ""
+            },
+            {
+              "id": "page-2d.1.4",
+              "title": "Headphones",
+              "href": ""
+            },
+            {
+              "id": "page-2d.1.5",
+              "title": "Speakers",
+              "href": ""
+            },
+            {
+              "id": "page-2d.1.6",
+              "title": "Home Entertainment Systems",
+              "href": ""
+            },
+            {
+              "id": "page-2d.1.7",
+              "title": "All Electronic Accessories",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-2e",
+      "title": "Women's Fashion",
+      "links": [
+        {
+          "id": "page-2e.1",
+          "listTitle": "Amazon Fashion",
+          "listLinks": [
+            {
+              "id": "page-2e.1.1",
+              "title": "All Fashion",
+              "href": ""
+            },
+            {
+              "id": "page-2e.1.2",
+              "title": "All Women's Fashion",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2e.2",
+          "listTitle": "Clothing, Watches & More",
+          "listLinks": [
+            {
+              "id": "page-2e.2.1",
+              "title": "Clothing",
+              "href": ""
+            },
+            {
+              "id": "page-2e.2.2",
+              "title": "Watches",
+              "href": ""
+            },
+            {
+              "id": "page-2e.2.3",
+              "title": "Jewelry",
+              "href": ""
+            },
+            {
+              "id": "page-2e.2.4",
+              "title": "Sportswear",
+              "href": ""
+            },
+            {
+              "id": "page-2e.2.5",
+              "title": "Lingerie & Sleepwear",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2e.3",
+          "listTitle": "Bags, Shoes & More",
+          "listLinks": [
+            {
+              "id": "page-2e.3.1",
+              "title": "Shoes",
+              "href": ""
+            },
+            {
+              "id": "page-2e.3.2",
+              "title": "Bags & Wallets",
+              "href": ""
+            },
+            {
+              "id": "page-2e.3.3",
+              "title": "Eyewear",
+              "href": ""
+            },
+            {
+              "id": "page-2e.3.4",
+              "title": "Sports Shoes",
+              "href": ""
+            },
+            {
+              "id": "page-2e.3.5",
+              "title": "Travel Bags & Backpacks",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-2g",
+      "title": "Men's Fashion",
+      "links": [
+        {
+          "id": "page-2g.1",
+          "listTitle": "Amazon Fashion",
+          "listLinks": [
+            {
+              "id": "page-2g.1.1",
+              "title": "All Fashion",
+              "href": ""
+            },
+            {
+              "id": "page-2g.1.2",
+              "title": "All Women's Fashion",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2g.2",
+          "listTitle": "Clothing, Watches & More",
+          "listLinks": [
+            {
+              "id": "page-2g.2.1",
+              "title": "Clothing",
+              "href": ""
+            },
+            {
+              "id": "page-2g.2.2",
+              "title": "Watches",
+              "href": ""
+            },
+            {
+              "id": "page-2g.2.3",
+              "title": "Jewelry",
+              "href": ""
+            },
+            {
+              "id": "page-2g.2.4",
+              "title": "Sportswear",
+              "href": ""
+            },
+            {
+              "id": "page-2g.2.5",
+              "title": "Lingerie & Sleepwear",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2g.3",
+          "listTitle": "Bags, Shoes & More",
+          "listLinks": [
+            {
+              "id": "page-2g.3.1",
+              "title": "Shoes",
+              "href": ""
+            },
+            {
+              "id": "page-2g.3.2",
+              "title": "Bags & Wallets",
+              "href": ""
+            },
+            {
+              "id": "page-2g.3.3",
+              "title": "Eyewear",
+              "href": ""
+            },
+            {
+              "id": "page-2g.3.4",
+              "title": "Sports Shoes",
+              "href": ""
+            },
+            {
+              "id": "page-2g.3.5",
+              "title": "Travel Bags & Backpacks",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-2h",
+      "title": "Kid's Fashion",
+      "links": [
+        {
+          "id": "page-2h.1",
+          "listTitle": "Boys Fashion",
+          "listLinks": [
+            {
+              "id": "page-2h.1.1",
+              "title": "All Boys Fashion",
+              "href": ""
+            },
+            {
+              "id": "page-2h.1.2",
+              "title": "Boys Clothing",
+              "href": ""
+            },
+            {
+              "id": "page-2h.1.3",
+              "title": "Boys Shoes",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2h.2",
+          "listTitle": "Girls Fashion",
+          "listLinks": [
+            {
+              "id": "page-2h.2.1",
+              "title": "All Girls Fashion",
+              "href": ""
+            },
+            {
+              "id": "page-2h.2.2",
+              "title": "Girls Clothing",
+              "href": ""
+            },
+            {
+              "id": "page-2h.2.3",
+              "title": "Girls Shoes",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "id": "page-2h.3",
+          "listTitle": "Amazon Fashion",
+          "listLinks": [
+            {
+              "id": "page-2h.3.1",
+              "title": "All Kids School Bags",
+              "href": ""
+            },
+            {
+              "id": "page-2h.3.2",
+              "title": "All Fashion",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
