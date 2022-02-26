@@ -28,7 +28,6 @@ export const Sidebar = ({
   const [moreLinks, setMoreLinks] = useState(false);
   const [sidebarPage, setSidebarPage] = useState("");
   const [sidebarPageNumber, setSidebarPageNumber] = useState(1);
-  console.log("🚀 ~ file: Sidebar.js ~ line 30 ~ sidebarPage", sidebarPage);
 
   const handleSetPage = (pageName, pageNumber) => {
     setSidebarPage(pageName);
@@ -36,11 +35,11 @@ export const Sidebar = ({
   };
 
   const sidebarLinks = sidebarData.pageOne.map((link) => (
-    <SidebarLinkContainer key={link.id}>
+    <SidebarLinkContainer key={`${link.id}${link.title}`}>
       <SidebarTitle>{link.title}</SidebarTitle>
       <SidebarList>
         {link.links.map((subLink) => (
-          <div key={subLink.id}>
+          <div key={`${subLink.id}${subLink.id + 4}`}>
             {subLink.title === "See" ? (
               <>
                 <SeeMoreLink
@@ -55,7 +54,7 @@ export const Sidebar = ({
                     <SidebarListItem
                       onClick={() => handleSetPage(more.page, 2)}
                       moreLinks={moreLinks}
-                      key={more.id}
+                      key={`${more.id}${more.title}`}
                     >
                       {more.title}
                       {more.icon && <Icon>chevron_right</Icon>}
@@ -80,16 +79,19 @@ export const Sidebar = ({
     </SidebarLinkContainer>
   ));
 
-  const pageTwoData = sidebarData.pageTwo.map((link) => (
-    <SidebarLinkContainer key={link.id}>
+  const pageTwoData = sidebarData.pageTwo.map((link, i) => (
+    <SidebarLinkContainer key={`${i}`}>
       {link.title === sidebarPage && (
         <>
-          {link.links.map((subPageLink) => (
-            <div key={link.id}>
+          {link.links.map((subPageLink, i) => (
+            <div key={i}>
               <SidebarTitle>{subPageLink.listTitle}</SidebarTitle>
               <SidebarList>
                 {subPageLink.listLinks.map((listLink) => (
-                  <SidebarLink key={listLink.id} href={listLink.href}>
+                  <SidebarLink
+                    key={`${listLink.id}${listLink.title + 11}`}
+                    href={listLink.href}
+                  >
                     {listLink.title}
                   </SidebarLink>
                 ))}
