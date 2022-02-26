@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "/slides/slide-1"
+  },
+  {
+    "id": 2,
+    "img": "/slides/slide-2"
+  },
+  {
+    "id": 3,
+    "img": "/slides/slide-3"
+  },
+  {
+    "id": 4,
+    "img": "/slides/slide-4"
+  },
+  {
+    "id": 5,
+    "img": "/slides/slide-5"
+  },
+  {
+    "id": 6,
+    "img": "/slides/slide-6"
+  }
+]
