@@ -35,7 +35,6 @@ export const Navbar = ({ toggleTheme, checkTheme, setShowSidebar }) => {
       </SearchContainer>
       <ButtonsContainer>
         <Button>Log in</Button>
-        <Button>Sign up</Button>
         <div>
           <Icon onClick={() => setShowSidebar(true)}>menu</Icon>
         </div>
