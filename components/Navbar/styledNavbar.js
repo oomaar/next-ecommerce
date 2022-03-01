@@ -28,6 +28,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 0.5rem;
+  z-index: ${({ theme }) => theme.zIndex.zHeader};
 
   span {
     cursor: pointer;
