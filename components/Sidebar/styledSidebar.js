@@ -15,6 +15,7 @@ export const OverLay = styled.div`
   bottom: 0;
   height: 100vh;
   transition: ${transition};
+  z-index: ${({ theme }) => theme.zIndex.zSidebar};
   transform: ${({ showSidebar }) =>
     showSidebar ? "translateX(0)" : "translateX(1000vw)"};
 
