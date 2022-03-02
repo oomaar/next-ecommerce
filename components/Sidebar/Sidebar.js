@@ -117,7 +117,7 @@ export const Sidebar = ({
             </SidebarHeaderUser>
             <p>
               Hello,{" "}
-              <Button className="white" link sidebarLink>
+              <Button link sidebarLink>
                 Sign in
               </Button>
             </p>

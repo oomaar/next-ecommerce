@@ -91,7 +91,7 @@ export const SidebarHeader = styled.header`
   width: 100%;
   padding: 1rem 0.5rem;
   background: ${({ theme }) => theme.colors.cardColor};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.titleColor};
 
   p {
     font-size: 1.1rem;
@@ -105,7 +105,6 @@ export const SidebarHeader = styled.header`
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
-    color: #fff;
   }
 
   .dark-icon {
@@ -115,16 +114,11 @@ export const SidebarHeader = styled.header`
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: ${({ theme }) => theme.typography.fontWeight.fontSemiBold};
-    color: #fff;
-  }
-
-  .white {
-    color: #fff;
   }
 `;
 
 export const SidebarHeaderUser = styled.div`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.titleColor};
 
   span {
     font-size: 2rem;
