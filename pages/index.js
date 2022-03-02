@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <NextHead title="E-Commerce - Login" />
 
-      <HomeContainer />
+      <HomeContainer data={data} />
     </>
   );
 }
