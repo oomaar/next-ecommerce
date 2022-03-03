@@ -3,7 +3,7 @@ import { HomeContainer } from "../containers";
 import { NextHead } from "../global/NextHead";
 
 export default function Home() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
