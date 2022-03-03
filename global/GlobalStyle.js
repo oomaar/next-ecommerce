@@ -39,6 +39,7 @@ export const theme = {
     zHeader: "200",
     zSidebar: "300",
     zModel: "1000",
+    zLoading: "1500",
   },
 };
 

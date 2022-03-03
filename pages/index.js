@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Loading } from "../components";
 import { HomeContainer } from "../containers";
 import { NextHead } from "../global/NextHead";
 
@@ -13,13 +14,15 @@ export default function Home() {
         .then((res) => res.json())
         .then((data) => {
           setData(data);
-          setIsLoading(false);
+          setTimeout(() => setIsLoading(false), 2000);
         });
     };
     fetchData();
   }, []);
 
-  isLoading && <h1>Loading....</h1>;
+  if (isLoading) {
+    return <Loading />;
+  }
   !data && <h1>No Data Available...</h1>;
 
   return (
