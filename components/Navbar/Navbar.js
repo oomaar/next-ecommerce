@@ -1,5 +1,6 @@
 import { Icon } from "@material-ui/core";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../../global/GlobalStyle";
 import {
@@ -16,14 +17,16 @@ export const Navbar = ({ toggleTheme, checkTheme, setShowSidebar }) => {
 
   return (
     <Nav>
-      <LogoContainer>
-        <Image
-          src="/favicon.png"
-          width={100}
-          height={100}
-          objectFit="contain"
-        />
-      </LogoContainer>
+      <Link href="/">
+        <LogoContainer>
+          <Image
+            src="/favicon.png"
+            width={100}
+            height={100}
+            objectFit="contain"
+          />
+        </LogoContainer>
+      </Link>
       <SearchContainer showInput={showInput}>
         <SearchIcon
           onClick={() => setShowInput((state) => !state)}
