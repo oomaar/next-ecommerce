@@ -1,9 +1,14 @@
+import { NextHead } from "../../global/NextHead";
+
 const Product = ({ product, products }) => {
     console.log("🚀 ~ file: [id].js ~ line 2 ~ Product ~ product", product);
     console.log("🚀 ~ file: [id].js ~ line 3 ~ Product ~ products", products);
 
     return (
-        <div>Product Page</div>
+        <div>
+            <NextHead title={`${product.title}`} />
+            Product Page
+        </div>
     )
 }
 
