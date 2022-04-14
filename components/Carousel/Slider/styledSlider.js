@@ -4,7 +4,7 @@ import { transition } from "../../../global/GlobalStyle";
 export const SliderContainer = styled.div`
   display: flex;
   overflow: hidden;
-  height: 615px;
+  height: 200px;
 `;
 
 export const SliderImage = styled.div`
