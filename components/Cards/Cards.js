@@ -1,4 +1,5 @@
 import { Icon } from "@material-ui/core";
+import Link from "next/link";
 import { Button } from "../../global/GlobalStyle";
 import {
   CardsContainer,
@@ -24,12 +25,13 @@ export const Cards = ({ data }) => {
     <CardContainer key={card.id}>
       <CardImage src={card.image} alt={card.title} />
       <CardSubContainer>
-        <CardTitle>{card.title}</CardTitle>
+        <Link href={`/product/${card.id}`}>
+          <CardTitle>{card.title}</CardTitle>
+        </Link>
         <PriceContainer>
           <CardPrice red={card.price >= 100}>${card.price}</CardPrice>
-          <CardNewPrice>{`${
-            card.price >= 100 ? "$" + discount[i] : ""
-          }`}</CardNewPrice>
+          <CardNewPrice>{`${card.price >= 100 ? "$" + discount[i] : ""
+            }`}</CardNewPrice>
         </PriceContainer>
         <CardCategorey>{card.category}</CardCategorey>
         <CardRate>
